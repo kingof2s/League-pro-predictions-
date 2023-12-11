@@ -13,6 +13,10 @@ We looked at
   <li>First Dragon</li>
   <li>First Rift Herald</li>
   <li>Turret plates taken</li>
+  <li>Side</li>
 </ol>  
 Dragon and rift herald come spawn at 5 and 8 minutes in, and typically taken close to the time they spawn. While there is a chance the first dragon and first rift herald are taken after 15 minutes, we believe there are only a very small and statistically insignificant number of games where this happens, so we decided to include them in our data. We avoided looking at objectives like baron and elder dragon however, since those do not come into play by until after 15 minutes. 
 We chose to look at accuracy because in this example false negatives and false positives are weighted equally. If we predict a team to win and they lose or if we predict a team to lose and they win are equally as wrong, unlike a covid test where a false negative is much more harmful than a false positive. 
+
+# Baseline Model
+The features we used have been listed above. Most of our features were quantitative, and we left them the same except we used stdScale to transform the gold and xp differences. Our side data was nominal, so we used onehotencoding to transform them. 
