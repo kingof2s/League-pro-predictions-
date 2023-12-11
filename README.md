@@ -7,15 +7,13 @@ We looked at
 <ol>
   <li>gold difference@15min</li>
   <li>xp difference@15min</li>
-  <li>Kills@15min</li>
-  <li>Deaths@15min</li>
-  <li>Assists@15min</li>
+  <li>First blood</li>
   <li>First Dragon</li>
   <li>First Rift Herald</li>
   <li>Turret plates taken</li>
   <li>Side</li>
 </ol>  
-Dragon and rift herald come spawn at 5 and 8 minutes in, and typically taken close to the time they spawn. While there is a chance the first dragon and first rift herald are taken after 15 minutes, we believe there are only a very small and statistically insignificant number of games where this happens, so we decided to include them in our data. We avoided looking at objectives like baron and elder dragon however, since those do not come into play by until after 15 minutes. 
+Dragon and rift herald come spawn at 5 and 8 minutes in, and typically taken close to the time they spawn, and first blood is the first kill in a game and is awarded extra gold. While there is a chance that first blood, first dragon, and first rift herald occur after 15 minutes, we believe there are only a very small and statistically insignificant number of games where this happens, so we decided to include them in our data. We avoided looking at objectives like baron and elder dragon however, since those do not come into play by until after 15 minutes. 
 We chose to look at accuracy because in this example false negatives and false positives are weighted equally. If we predict a team to win and they lose or if we predict a team to lose and they win are equally as wrong, unlike a covid test where a false negative is much more harmful than a false positive. 
 
 # Baseline Model
