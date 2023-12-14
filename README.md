@@ -70,7 +70,9 @@ This feature was scraped from the official Riot API and the well-established Com
 <br>
 Here are some plots showcasing the relationship between our features and the result:
 
+
 <iframe src="docs/assets/cspm.html" width=640 height=400 frameBorder=0></iframe>
+
 
 
 <iframe src="docs/assets/vspm.html" width=640 height=400 frameBorder=0></iframe>
@@ -109,7 +111,7 @@ Here are some plots showcasing the relationship between our features and the res
 <iframe src="docs/assets/bot_xp.html" width=640 height=400 frameBorder=0></iframe>
 
 
-<iframe src="docs/assets/jng_hold.html" width=640 height=400 frameBorder=0></iframe>
+<iframe src="docs/assets/jng_gold.html" width=640 height=400 frameBorder=0></iframe>
 
 
 <iframe src="docs/assets/mobile_champs.html" width=640 height=400 frameBorder=0></iframe>
