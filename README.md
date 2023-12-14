@@ -51,6 +51,16 @@ These features break down the existing ``golddiffat15`` and ``xpdiffat15`` more 
 
 This feature was scraped from the official Riot API and the well-established CommunityDragon API, indicating how many champions in the team has some form of mobility skill in their kit. We believe this is important, as champions without mobility, especially the fragile bot laners, are much more vulnerable to assassins since they cannot run away as quickly. Knowing the number of "mobile" champions can tell us whether the team is able to manoeuvre quickly around the map and more importantly, their enemies.
 
+<br>
+Here are some plots showcasing the relationship between our features and the result:
+
+
+<iframe src="docs/assets/top_gold.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/jng_hold.html" width=640 height=400 frameBorder=0></iframe>
+
+
 ### Model selection
 
 We tested many different models, but we had the highest train and test accuracy with ``LogisticRegression``. We used ``GridSearchCV`` to tune our hyperparameters: 
@@ -64,10 +74,14 @@ We found that the best hyperparameters were ``C = 10``, ``solver = 'liblinear'``
 
 Our test accuracy score for the final model is 0.82, or 82%, which is an improvement over our baseline model.
 
+Here is the confusion matrix for our final model:
+
+
+<iframe src="docs/assets/cm_overall.html" width=640 height=400 frameBorder=0></iframe>
+
 
 # Fairness Analysis
 
-<<<<<<< HEAD
 ### Grouping choice
 ***Does the model perform differently for games played before/after the introduction of mythic items in Season 11?***
 
@@ -90,10 +104,7 @@ The absolute difference in model accuracy for the two groups
 ### Permutation Distribution
 
 
-![Permutation Distribution]()
+<iframe src="docs/assets/permutation_test.html" width=640 height=400 frameBorder=0></iframe>
 
 
  Our null hypothesis was that the accuracy before and after mythic items were introduced comes from the same distribution, and our alt hypothesis is that they come from different distributions. The test statistic we used was the absolute difference in accuracy, and the p-value we got was 0.00. As such
-=======
-We chose to do our fairness analysis test to check if our model preformed similarly before and after the introduction of mythic items, which marked a major change in the game's design and was introduced in season 11. These items are typically purchased first and provide a massive advantage, meaning the value of an early gold lead may have changed significantly after their introduction. Our group x was before season 11 (pre mythic), and our group y was during and after season 11. Our null hypothesis was that the accuracy before and after mythic items were introduced comes from the same distribution, and our alt hypothesis is that they come from different distributions. The test statistic we used was the absolute mean difference, and our p value we got was 0.0. This provides strong evidence that we should reject the null hypothesis, meaning that our classification model likely is not fair when comparing matches before and after the introduction of mythic items. 
->>>>>>> 33b077109a16cdc554407de293b91c70ca2fb92c
