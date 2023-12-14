@@ -25,6 +25,22 @@ Our baseline model takes in some game statistics available before 15:00 of the g
 
 We first encoded ``side`` with a OneHotEncoder, as it is the only nominal feature that is not binary. We then used a FunctionTransformer inside a ColumnTransformer on ``turretplates`` and ``opp_turretplates`` to calculate a new feature, ``platediff`` that indicates the difference between the plates earned by the team and their opponent. All other features are passed through as-is into our Logistic Regressor, which we used GridSearchCV to tune the hyperparameters of.
 
+
+Here are some plots showcasing the relationship between our features and the response variable:
+
+<iframe src="docs/assets/firstdragon.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/firstherald.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/firsttower.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/firstblood.html" width=640 height=400 frameBorder=0></iframe>
+
+
+
 ### Model evaluation
 
 
@@ -54,11 +70,52 @@ This feature was scraped from the official Riot API and the well-established Com
 <br>
 Here are some plots showcasing the relationship between our features and the result:
 
+<iframe src="docs/assets/cspm.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/vspm.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/dpm.html" width=640 height=400 frameBorder=0></iframe>
+
 
 <iframe src="docs/assets/top_gold.html" width=640 height=400 frameBorder=0></iframe>
 
 
+<iframe src="docs/assets/jng_gold.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/mid_gold.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/sup_gold.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/bot_gold.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/top_xp.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/jng_xp.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/mid_xp.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/sup_xp.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/bot_xp.html" width=640 height=400 frameBorder=0></iframe>
+
+
 <iframe src="docs/assets/jng_hold.html" width=640 height=400 frameBorder=0></iframe>
+
+
+<iframe src="docs/assets/mobile_champs.html" width=640 height=400 frameBorder=0></iframe>
+
+
+
 
 
 ### Model selection
@@ -107,4 +164,6 @@ The absolute difference in model accuracy for the two groups
 <iframe src="docs/assets/permutation_test.html" width=640 height=400 frameBorder=0></iframe>
 
 
- Our null hypothesis was that the accuracy before and after mythic items were introduced comes from the same distribution, and our alt hypothesis is that they come from different distributions. The test statistic we used was the absolute difference in accuracy, and the p-value we got was 0.00. As such
+Our obtained p-value is 0.00, as such we reject the null hypothesis: That our model's accuracy is the same for pre-S11 and post-S11 games.
+
+ Based on this, it is likely that the difference in accuracy is statistically significant, and that the introduction of mythic items could have had an effect on the outcome of the game.
