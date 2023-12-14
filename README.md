@@ -28,4 +28,7 @@ For our final model, our biggest change was calculating our stats by team positi
 
 We tested many different models, but we had the most success with LogisticRegression. We used a GridSearch to tune our hyperparameters. We c values of [0.001, 0.01, 0.1, 1, 10, 100], liblinear and saga solvers w different l1_ratio, and penalties of [l1(abs of coeff), l2(sq of coeff), and various combinations of the two]. We found that the best hyperparameters were C = 10,solver = 'liblinear', and penalty = l1(abs).  
 
+In the end we had a slight but noticible improvement, with around .816 and .815 values for our testing and training accuracy as opposed to .758 and .756 from the baseline model. 
 # Fairness Analysis
+
+We chose to do our fairness analysis test to check if our model preformed similarly before and after the introduction of mythic items, which marked a major change in the game's design and was introduced in season 11. Our group x was before season 11, and our group y was during and after season 11. Our null hypothesis was that the accuracy before and after mythic items were introduced comes from the same distribution, and our alt hypothesis is that they come from different distributions. The test statistic we used was the ... and our p value we got was ..., which led us ... the null hypothesis. 
