@@ -67,6 +67,7 @@ Our test accuracy score for the final model is 0.82, or 82%, which is an improve
 
 # Fairness Analysis
 
+<<<<<<< HEAD
 ### Grouping choice
 ***Does the model perform differently for games played before/after the introduction of mythic items in Season 11?***
 
@@ -93,3 +94,6 @@ The absolute difference in model accuracy for the two groups
 
 
  Our null hypothesis was that the accuracy before and after mythic items were introduced comes from the same distribution, and our alt hypothesis is that they come from different distributions. The test statistic we used was the absolute difference in accuracy, and the p-value we got was 0.00. As such
+=======
+We chose to do our fairness analysis test to check if our model preformed similarly before and after the introduction of mythic items, which marked a major change in the game's design and was introduced in season 11. These items are typically purchased first and provide a massive advantage, meaning the value of an early gold lead may have changed significantly after their introduction. Our group x was before season 11 (pre mythic), and our group y was during and after season 11. Our null hypothesis was that the accuracy before and after mythic items were introduced comes from the same distribution, and our alt hypothesis is that they come from different distributions. The test statistic we used was the absolute mean difference, and our p value we got was 0.0. This provides strong evidence that we should reject the null hypothesis, meaning that our classification model likely is not fair when comparing matches before and after the introduction of mythic items. 
+>>>>>>> 33b077109a16cdc554407de293b91c70ca2fb92c
