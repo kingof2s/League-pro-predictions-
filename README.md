@@ -25,3 +25,7 @@ However the accuracy can never reach 100, since sometimes a team will come back 
 
 # Final Model
 For our final model, our biggest change was calculating our stats by team position. In a game of league of legends, having more xp and gold is more important on certain positions than others. The support role is generally designed to function well without gold, so a team with a gold advantage on the face value but all of that gold is on the support may not be in a better position to win. Knowing this, we believed that a role specific cs and xp differences would be a better indicator of success than overall differences. In particular, we believed the stats on the bot lane and mid lane to be most impactful, as those roles are typically "carries" who need a lot of gold in order to build their items and deal a lot of damage. 
+
+We tested many different models, but we had the most success with LogisticRegression. We used a GridSearch to tune our hyperparameters. We c values of [0.001, 0.01, 0.1, 1, 10, 100], liblinear and saga solvers w different l1_ratio, and penalties of [l1(abs of coeff), l2(sq of coeff), and various combinations of the two]. We found that the best hyperparameters were C = 10,solver = 'liblinear', and penalty = l1(abs).  
+
+# Fairness Analysis
