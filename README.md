@@ -111,9 +111,6 @@ Here are some plots showcasing the relationship between our features and the res
 <iframe src="docs/assets/bot_xp.html" width=640 height=400 frameBorder=0></iframe>
 
 
-<iframe src="docs/assets/jng_gold.html" width=640 height=400 frameBorder=0></iframe>
-
-
 <iframe src="docs/assets/mobile_champs.html" width=640 height=400 frameBorder=0></iframe>
 
 
@@ -122,7 +119,7 @@ Here are some plots showcasing the relationship between our features and the res
 
 ### Model selection
 
-We tested many different models, but we had the highest train and test accuracy with ``LogisticRegression``. We used ``GridSearchCV`` to tune our hyperparameters: 
+We tested many different models, but we had the highest train and test accuracy with LogisticRegression. We used GridSearchCV to tune our hyperparameters: 
 1. the ``C: [0.001, 0.01, 0.1, 1, 10, 100]``, 
 2. ``solver: ['liblinear', 'saga']``
 3.  ``penalty: ['l1', 'l2', 'elasticnet']`` 
