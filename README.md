@@ -1,4 +1,4 @@
--# League-pro-predictions
+# League-pro-predictions
 
 https://uniformlyconvergentsubsequence.github.io/League-pro-predictions-/
 
